@@ -1,0 +1,45 @@
+<head>  
+    <style>   
+      div.left { text-align: left; background: #ffcccc; }  
+      div.center { text-align: center; background: #9ff5a3; }  
+      div.right { text-align: right; background: #ccccff; }  
+      div.justify { text-align: justify; background: #ffffcc; }  
+
+    </style>  
+</head>  
+
+  <div class="center">
+      <h2>Knowledge Sharing Portal</h2>
+  </div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Welcome to knowledge sharing!
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" style="background-color: rgb(172, 231, 170);">
+      
+      <ul class="nav navbar-nav" >
+        <li routerLinkActive="active"><a routerLink="/projects">Our Projects</a></li>
+        <li routerLinkActive="active"><a routerLink="/book-list">List of Prerequisite</a></li>
+        <li routerLinkActive="active"><a routerLink="/aboutus">About</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage Projects <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor: pointer;">Save Data</a></li>
+            <li><a style="cursor: pointer;">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>     
+
+    </div>
+  </div>
+ 
+</nav>
+
+

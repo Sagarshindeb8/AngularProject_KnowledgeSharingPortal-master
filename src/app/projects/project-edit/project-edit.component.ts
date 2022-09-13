@@ -9,7 +9,7 @@ import { ProjectService } from '../project.service';
   templateUrl: './project-edit.component.html',
   styleUrls: ['./project-edit.component.css']
 })
-export class ProjectEditComponent implements OnInit 
+export class ProjectEditComponent implements OnInit
 {
   id: number;
   editMode = false;
@@ -31,21 +31,21 @@ export class ProjectEditComponent implements OnInit
       );
   }
 
-  onSubmit() 
+  onSubmit()
   {
-    if (this.editMode) 
+    if (this.editMode)
     {
       this.projectService.updateProject(this.id, this.proForm.value);
     }
-    else 
+    else
     {
       this.projectService.addProject(this.proForm.value);
     }
-    
+
     this.onCancel();
   }
 
-  onAddBook() 
+  onAddBook()
   {
     (<FormArray>this.proForm.get('Books')).push(
       new FormGroup({
@@ -58,24 +58,24 @@ export class ProjectEditComponent implements OnInit
     );
   }
 
-  onDeleteBook(index: number) 
+  onDeleteBook(index: number)
   {
     (<FormArray>this.proForm.get('Books')).removeAt(index);
   }
 
-  onCancel() 
+  onCancel()
   {
     this.router.navigate(['../'], {relativeTo: this.route});
   }
 
-  private initForm() 
+  private initForm()
   {
     let proName = '';
     let proImagePath = '';
     let proDescription = '';
     let proBooks = new FormArray([]);
 
-    if (this.editMode) 
+    if (this.editMode)
     {
       const pro = this.projectService.getProject(this.id);
       proName = pro.name;

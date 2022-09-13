@@ -13,7 +13,7 @@ public isLoginSuccessful = false;
   ngOnInit() {
   }
 
-  login() {
+  login(x:string,y:string) {
     if(this.username === 'admin' && this.password === 'admin') {
       this.isLoginSuccessful = true ;
     }
